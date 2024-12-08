@@ -2,7 +2,6 @@ package com.luxoft.bankapp.service;
 
 import com.luxoft.bankapp.exceptions.AccountNotFoundException;
 import com.luxoft.bankapp.exceptions.ClientNotFoundException;
-import com.luxoft.bankapp.exceptions.NotEnoughFundsException;
 import com.luxoft.bankapp.model.*;
 import com.luxoft.bankapp.service.storage.Storage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -129,7 +128,6 @@ public class BankingImpl implements Banking {
         this.storage = storage;
     }
 
-    // TODO feed
     public void parseFeed(Map<String, String> map) {
         String name = map.get("NAME");
 
